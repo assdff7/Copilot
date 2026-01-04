@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smile Honey</title>
+
+<style>
+/* ------------------------------
+   基本設定
+------------------------------ */
+body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background-color: #fffdf7;
+    color: #333;
+    text-align: center;
+}
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+header {
+    width: 100%;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #f4a300;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+}
+
+/* ------------------------------
+   HERO セクション
+------------------------------ */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img.bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero img.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 650px;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+}
+
+/* ------------------------------
+   セクション共通
+------------------------------ */
+.section {
+    padding: 70px 20px;
+}
+
+.section img.full {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------
+   2枚目：THANK YOU テキスト
+------------------------------ */
+.text2-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.text2-wrap img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.text2-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* ------------------------------
+   3枚目：花の画像 + テキスト
+------------------------------ */
+.text-overlay-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.text-overlay-wrap img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ------------------------------
+   4枚目：価格（瓶を左に重ねる）
+------------------------------ */
+.price-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.price-wrap img.price-bg {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.price-wrap img.product-jar {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 35%;
+    max-width: 300px;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+}
+
+/* 価格テキスト（大きく調整） */
+.price-text {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    text-align: left;
+    color: #4a3200;
+    font-size: 22px;
+    line-height: 1.9;
+    font-weight: 600;
+}
+
+.price-text strong {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------
+   5枚目：SHOP + ボタン
+------------------------------ */
+.shop-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.shop-wrap img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.shop-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.75);
+    padding: 25px 20px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.shop-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: #f4a300;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   スマホ対応
+------------------------------ */
+@media (max-width: 600px) {
+    .hero img.title {
+        width: 95%;
+        max-width: 500px;
+    }
+    .text2-box {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .text-overlay {
+        font-size: 16px;
+        padding: 18px;
+    }
+    .price-wrap img.product-jar {
+        position: static;
+        transform: none;
+        width: 60%;
+        margin-top: -40px;
+    }
+    .price-text {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .price-text strong {
+        font-size: 26px;
+    }
+    .shop-text {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Smile Honey</h1>
+    <nav>
+        <a href="#">商品</a>
+        <a href="#">ストーリー</a>
+        <a href="#">ショップ</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <img class="bg" src="https://raw.githubusercontent.com/assdff7/a/main/image/hero-bg.png" alt="ヒーロー背景画像">
+    <img class="title" src="https://raw.githubusercontent.com/assdff7/a/main/image/hero-title.png" alt="Smile Honey タイトル画像">
+</section>
+
+<!-- 2枚目：THANK YOU テキスト -->
+<section class="section">
+    <div class="text2-wrap">
+        <img src="https://raw.githubusercontent.com/assdff7/a/main/image/product-photo.png" alt="商品写真">
+        <div class="text2-box">
+            THANK YOU FOR COMING<br>
+            SMILE HONEY<br>
+            Project for bee MANA inc<br><br>
+            MANA INCから新しいはちみつが登場しました。<br>
+            その名も、「SMILE HONEY」笑顔のはちみつ
+        </div>
+    </div>
+</section>
+
+<!-- 3枚目：花の画像 + テキスト -->
+<section class="section">
+    <div class="text-overlay-wrap">
+        <img src="https://raw.githubusercontent.com/assdff7/a/main/image/concept-bg.png" alt="花の背景画像">
+        <div class="text-overlay">
+            自然と人の手が育てた、笑顔のはちみつ。<br>
+            山の花々から集めた蜜を、<br>
+            できるだけ手を加えずにそのまま瓶詰めしました。<br>
+            ビタミンやミネラルを豊富に含んでいるため、<br>
+            疲れを癒す自然の力が詰まっています。<br>
+            毎日がんばるあなたに、<br>
+            ほっと笑顔になれる甘さを。
+        </div>
+    </div>
+</section>
+
+<!-- 4枚目：価格 -->
+<section class="section">
+    <div class="price-wrap">
+        <img class="price-bg" src="https://raw.githubusercontent.com/assdff7/a/main/image/price-bg.png" alt="価格紹介画像">
+        <img class="product-jar" src="https://raw.githubusercontent.com/assdff7/a/main/image/product-jar.png" alt="Smile Honey の瓶">
+
+        <div class="price-text">
+            <strong>Smile Honey</strong>
+            口に入れた瞬間笑顔になるような蜂蜜です。<br>
+            税抜価格　2,500円<br>
+            （税込価格　2,750円）/100mL
+        </div>
+    </div>
+</section>
+
+<!-- 5枚目：SHOP -->
+<section class="section">
+    <div class="shop-wrap">
+        <img src="https://raw.githubusercontent.com/assdff7/a/main/image/shop-bg.png" alt="ショップ案内画像">
+        <div class="shop-text">
+            <strong>SHOP</strong><br>
+            あなたの街の取扱店をご案内します。<br><br>
+            ※店舗により取扱状況が異なります。<br><br>
+            <a class="shop-btn" href="#">SHOP</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smile Honey</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #ffffffcc;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+}
+
+header h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #f4a300;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ヒーローセクション */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero img.hero-bg {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero img.hero-title {
+    width: 70%;
+    max-width: 500px;
+    margin-top: -120px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background-color: #f4a300;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* セクション */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 28px;
+    color: #f4a300;
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+    .hero img.hero-title {
+        width: 85%;
+        margin-top: -80px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Smile Honey</h1>
+    <nav>
+        <a href="#">商品</a>
+        <a href="#">ストーリー</a>
+        <a href="#">ショップ</a>
+    </nav>
+</header>
+
+<!-- ヒーローセクション -->
+<section class="hero">
+    <!-- 背景画像 -->
+    <img class="hero-bg" src="https://raw.githubusercontent.com/assdff7/a/main/image/hero-bg.png" alt="はちみつの背景画像">
+
+    <!-- タイトル画像 -->
+    <img class="hero-title" src="https://raw.githubusercontent.com/assdff7/a/main/image/hero-title.png" alt="Smile Honey のタイトル画像">
+
+    <a class="btn" href="#">詳しく見る</a>
+</section>
+
+<!-- コンセプトセクション -->
+<section class="section">
+    <img src="https://raw.githubusercontent.com/assdff7/a/main/image/concept-bg.png" alt="コンセプト紹介の背景画像">
+    <h3>笑顔のはちみつとは？</h3>
+    <p>
+        「Smile Honey」は、自然の恵みと丁寧な養蜂から生まれた特別な蜂蜜です。  
+        ひとくち食べれば、ふわっと広がる優しい甘さ。  
+        毎日の暮らしに小さな幸せを届けます。
+    </p>
+</section>
+
+<!-- 商品紹介 -->
+<section class="section">
+    <img src="https://raw.githubusercontent.com/assdff7/a/main/image/product-photo.png" alt="商品写真">
+    <img src="https://raw.githubusercontent.com/assdff7/a/main/image/product-jar.png" alt="Smile Honey の瓶の写真">
+</section>
+
+<!-- 価格セクション -->
+<section class="section">
+    <img src="https://raw.githubusercontent.com/assdff7/a/main/image/price-bg.png" alt="価格情報の背景画像">
+</section>
+
+<!-- ショップ案内 -->
+<section class="section">
+    <img src="https://raw.githubusercontent.com/assdff7/a/main/image/shop-bg.png" alt="ショップ案内の背景画像">
+</section>
+
+</body>
+</html>
